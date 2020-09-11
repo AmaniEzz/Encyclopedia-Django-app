@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdownify %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+       {{ entry | markdownify }}
+       <a href = " {% url 'Edit_Page' title %} "> Edit Page </a> 
+{% endblock %}
