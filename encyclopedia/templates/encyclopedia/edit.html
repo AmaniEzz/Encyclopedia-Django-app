@@ -1,4 +1,5 @@
 {% extends "encyclopedia/layout.html" %}
+{% load markdownify %}
 
 {% block title %}
      Edit page
@@ -14,7 +15,7 @@
         <textarea name="content"> {{content}}</textarea>
     <br><br>
        <input type="submit" value="Save">
-       <button onclick="location.href='{% url 'title' title %}'" type="button"> Cancel </button>
+       <button onclick="location.href ='{% url 'title' title %}'" type="button"> Cancel </button>
 
 </form>
 

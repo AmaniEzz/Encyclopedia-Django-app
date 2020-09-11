@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from encyclopedia.forms import NewPageForm, EditEntryForm
 import random
+import re
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
@@ -42,7 +43,7 @@ def New_Page(request):
     if request.method == 'POST':
         title   = request.POST.get('title')
         content = request.POST.get('content')
-        util.save_entry(title, content)
+        util.save_entry(title, re.sub('\r', '', content.strip()))
         return HttpResponseRedirect(reverse('title', args=[title]) )
     else:
         return render(request, "encyclopedia/new_page.html")
@@ -53,7 +54,7 @@ def Edit_Page(request, name):
     if request.method == "POST":
         title   = request.POST.get('title')
         content = request.POST.get('content')
-        util.save_entry(title,content)
+        util.save_entry(title, re.sub('\r', '', content.strip()))
         return HttpResponseRedirect(reverse('title', args=[title]) )
 
     if request.method =="GET":
