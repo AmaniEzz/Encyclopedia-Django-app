@@ -13,7 +13,9 @@
     <label>Edit The content for the page:</label>
         <textarea name="content"> {{content}}</textarea>
     <br><br>
-       <input type="submit" value="Submit">
+       <input type="submit" value="Save">
+       <button onclick="location.href='{% url 'title' title %}'" type="button"> Cancel </button>
+
 </form>
 
 {% endblock %}
