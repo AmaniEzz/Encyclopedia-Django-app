@@ -4,4 +4,4 @@ dj-database-url==0.4.2
 django==3.0.3
 psycopg2==2.7.3.2
 pytz==2020.1
-whitenoise==4.0.1
+whitenoise==4.0
