@@ -7,5 +7,6 @@
 
 {% block body %}
        {{ entry |markdownify}}
-       <a href = " {% url 'Edit_Page' title %} "> Edit Page </a> 
+       <button onclick="location.href ='{% url 'Edit_Page' title %}'" type="button" class="btn btn-secondary">  Edit Page </button>
+
 {% endblock %}

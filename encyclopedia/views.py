@@ -10,7 +10,7 @@ import re
 def index(request):
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries(),
-        "header": "All pages"
+        "header": "All Encyclopedia pages"
     })
 
 def title(request, entry_name):

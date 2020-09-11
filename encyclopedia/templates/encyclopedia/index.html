@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    <h3>{{header}}</h3>
+    <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{header}}</h3>
 
-    <ul>
+    <ul style="list-style: square; padding-top: 20px;">
         {% for entry in entries %}
-            <li> <a href = " {% url 'title' entry %} "> {{ entry }} </a> </li>
+            <li style="padding-bottom: 10px;text-decoration: underline;"> <a href = " {% url 'title' entry %} " style="color:dimgrey"> {{ entry }} </a> </li>
         {% endfor %}
     </ul>
 
