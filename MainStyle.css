@@ -1,0 +1,205 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* this only worked in internet explor */
+@media (min-width: 600px) {
+  #main_Header::before {
+    content: "Start learning programming today";
+  }
+}
+@media (max-width: 599px) {
+  #main_Header::before {
+    content: "Start today!";
+  }
+}
+.background {
+  background-image: url("MainBackground.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(31, 30, 30, 0.4);
+  opacity: 0.8;
+}
+
+.container_1 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-end;
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+header h2, header h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 10px 0px 0px 0px;
+  color: white;
+}
+
+article hgroup h1 a:hover, nav ul li a:hover {
+  text-decoration: none;
+}
+
+header h1 {
+  font-weight: bolder;
+  padding-left: 25px;
+  font-size: 2.5em;
+}
+header h2 {
+  font-weight: lighter;
+  padding-left: 25px;
+  font-size: 1.2em;
+}
+
+nav {
+  width: 100%;
+  padding: 0;
+  align-items: center;
+  align-self: center;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 2px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  height: 50px;
+  /* padding: top right bottom left*/
+  background-color: rgba(200, 200, 200, 0.3);
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0;
+  padding-left: 2px;
+}
+nav ul li a {
+  display: block;
+  color: rgba(0, 0, 0, 0.9);
+  padding: 6px 14px;
+}
+nav ul li a:hover {
+  background-color: transparent;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.9);
+  border: 2px solid white;
+}
+
+article {
+  margin: 5% 2%;
+}
+article hgroup {
+  margin: 0;
+  margin-bottom: 30px;
+  border-left: 5px solid #050e2e;
+  color: white;
+}
+article hgroup h1 {
+  margin: 0px 10px;
+}
+article hgroup h1 a {
+  font-weight: bolder;
+  font-size: 35px;
+  color: rgba(7, 6, 75, 0.8);
+}
+article hgroup h1 a:hover {
+  color: rgba(7, 6, 75, 0.8);
+  font-weight: lighter;
+}
+article hgroup h2 {
+  margin: 0px 10px;
+  font-size: 1em;
+  font-weight: lighter;
+}
+article hgroup h3 {
+  margin: 10px;
+  font-size: 0.7em;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid #c8c8c8;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  width: 35%;
+  height: 50%;
+  margin: 40px;
+}
+
+th {
+  background-color: rgba(235, 235, 235, 0.6);
+}
+
+td {
+  text-align: center;
+}
+td a {
+  font-size: 15px;
+  color: rgba(7, 6, 75, 0.8);
+}
+
+td, th {
+  border: 1px solid #bebebe;
+  padding: 10px 20px;
+}
+
+tr:nth-child(even) td {
+  background-color: rgba(250, 250, 255, 0.3);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgba(245, 245, 245, 0.3);
+}
+
+code {
+  font-family: "Menlo", monospace;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+footer p {
+  color: white;
+  width: 100%;
+  border-top: 1px solid #9b9b9b;
+  padding: 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=MainStyle.css.map */
