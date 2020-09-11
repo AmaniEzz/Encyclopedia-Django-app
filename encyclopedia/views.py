@@ -38,31 +38,28 @@ def search(request):
     })
 
 def New_Page(request):
+    #form = NewPageForm(request.POST)
     if request.method == 'POST':
-        form = NewPageForm(request.POST)
         title   = request.POST.get('title')
         content = request.POST.get('content')
-        if form.is_valid():
-            util.save_entry(title, content)
-            return HttpResponseRedirect(reverse('title', args=[title]) )
+        util.save_entry(title, content)
+        return HttpResponseRedirect(reverse('title', args=[title]) )
     else:
         return render(request, "encyclopedia/new_page.html")
 
 
 def Edit_Page(request, name):
-    form = EditEntryForm(request.POST)
+    #form = EditEntryForm(request.POST)
     if request.method == "POST":
-        if form.is_valid():
-            title = form.cleaned_data["title"]
-            content = form.cleaned_data["content"]
-            util.save_entry(title,content)
+        title   = request.POST.get('title')
+        content = request.POST.get('content')
+        util.save_entry(title,content)
         return HttpResponseRedirect(reverse('title', args=[title]) )
 
     if request.method =="GET":
         return render(request, "encyclopedia/edit.html", {
-        "form": EditEntryForm(name),
         "title": name,
-        "content": markdown(util.get_entry(name))
+        "content": util.get_entry(name)
          })
          
 def Random_Page(request):
