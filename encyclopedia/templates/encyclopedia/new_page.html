@@ -7,13 +7,18 @@
 {% block body %}
 <form action="{% url 'New_Page' %}" method="POST">
     {% csrf_token %}
-    <label>Title of the page:</label>
-        <input type="text" name="title">
-    <br><br>
-    <label> Markdown content for the page:</label>
-        <textarea name="content">  </textarea>
-    <br><br>
-       <input type="submit" value="Submit">
+    <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Enter a Title</span>
+        </div>
+        <input type="text"  class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      </div>  
+      
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Markdown content of the page :</label>
+        <textarea class="form-control"  name="content" id="exampleFormControlTextarea1" rows="11"></textarea>
+      </div>
+       <input type="submit" value="Create" class="btn btn-secondary">
 </form>
 
 {% endblock %}
