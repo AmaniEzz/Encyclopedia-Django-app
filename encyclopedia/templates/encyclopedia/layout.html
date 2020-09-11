@@ -11,26 +11,35 @@
     </head>
     <body>
         <div class="row">
-            <div class="sidebar col-lg-2 col-md-3">
-                <h2>Wiki</h2>
+            <div class="sidebar col-lg-4 col-md-5 bg-dark">
+
+                <h1 style="color: white;">Wiki</h1>
+
                 <form action="{% url 'search' %}" method="POST">
                 {% csrf_token %}
-                    <input class="search" type="text" name="key_words" placeholder="Search Encyclopedia">
+                <!-- Search form -->
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" name="key_words" placeholder="Search" aria-label="Search">
                 </form>
-                <div>
-                    <a href="{% url 'index' %}">Home</a>
+                </form>
+                
+                <div class="divbar">
+                <div >
+                    <a class="nav-link active" href="{% url 'index' %}">Home</a>
                 </div>
                 <div>
-                    <a href="{% url 'New_Page' %}">Create New Page</a>
+                    <a class="nav-link active" href="{% url 'New_Page' %}">Create New Page</a>
                 </div>
                 <div>
-                    <a href="{% url 'Random_Page' %}">Random Page</a>
-                    
+                    <a class="nav-link active" href="{% url 'Random_Page' %}">Random Page</a>    
                 </div>
+                </div>
+
                 {% block nav %}
                 {% endblock %}
             </div>
-            <div class="main col-lg-10 col-md-9">
+
+            <div class="main col-lg-8 col-md-6">
                 {% block body %}
                 {% endblock %}
             </div>

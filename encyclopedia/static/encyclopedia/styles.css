@@ -1,6 +1,12 @@
 body {
-    margin: 0;
+    margin:0;
     background-color: white;
+    width: 1200px ;
+}
+
+html {
+    width:100%;
+    margin:0;
 }
 
 code {
@@ -12,27 +18,51 @@ h1 {
     padding-top: 20px;
 }
 
+h2 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+
 textarea {
     height: 90vh;
     width: 80%;
 }
 
 .main {
-    padding: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
 }
 
-.search {
-    width: 100%;
-    font-size: 15px;
-    line-height: 15px;
+.divbar {
+    padding-top: 30px;
+    margin: 0 0;
 }
+
+.divbar div{
+    padding-bottom: 10px; 
+}
+.divbar div a {
+    color: #f0f0f0;
+}
+
+.divbar div a:hover {
+    background-color: rgb(87, 158, 240, 0.6);
+    color: black;
+    border-radius: 4px;
+  }
+  
 
 .sidebar {
     background-color: #f0f0f0;
     height: 100vh;
-    padding: 20px;
-}
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
 
-.sidebar h2 {
-    margin-top: 5px;
 }
