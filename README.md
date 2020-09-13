@@ -1,11 +1,17 @@
 # Encyclopedia-Django-app
-A Wikipedia-like online encyclopedia.
+#### A Wikipedia-like online encyclopedia.
 
+<<<<<<< HEAD
 ## https://encyclopediaapp.herokuapp.com/
 
 ```
 This django app is a simple online encyclopedia, where each encyclopedia entry is represented by Markdown file, so that our entries more human-friendly to write and edit, then it is convert into HTML before displaying it to the user.
 ```
+=======
+     This django app is a simple online encyclopedia, where each encyclopedia entry is represented by Markdown file, 
+     so that our entries more human-friendly to write and edit, 
+     then it is convert into HTML before displaying it to the user.
+>>>>>>> 504582cf8a2bb6e94da23b012ed9a1455e383bc9
 
 ## Functionalities
 
